@@ -22,18 +22,19 @@ def count_plots(df):
     ax7 = fig.add_subplot(gs[2,1])
     ax8 = fig.add_subplot(gs[2,2])
 
-    background_color = "yellow"
+    background_color = "white"
     color_palette = ["cyan","magenta","pink","blue","#da8829"]
     fig.patch.set_facecolor(background_color) 
-    ax0.set_facecolor(background_color) 
-    ax1.set_facecolor(background_color) 
-    ax2.set_facecolor(background_color) 
-    ax3.set_facecolor(background_color) 
-    ax4.set_facecolor(background_color) 
-    ax5.set_facecolor(background_color) 
-    ax6.set_facecolor(background_color) 
-    ax7.set_facecolor(background_color) 
-    ax8.set_facecolor(background_color) 
+    ax0.set_facecolor("grey") 
+    ax1.set_facecolor("grey") 
+    ax2.set_facecolor("grey") 
+    ax3.set_facecolor("grey") 
+    ax4.set_facecolor("grey") 
+    ax5.set_facecolor("grey") 
+    ax6.set_facecolor("grey") 
+    ax7.set_facecolor("grey") 
+    ax8.set_facecolor("grey") 
+
 
     # Title of the plot
     ax0.spines["bottom"].set_visible(False)
@@ -52,49 +53,49 @@ def count_plots(df):
     #          color="#000000")
 
     # Sex count
-    ax1.text(0.3, 220, 'SEX', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+    ax1.text(0.3, 220, 'SEX', fontsize=14, fontweight='bold', fontfamily='serif', color="grey")
     ax1.grid(color='#000000', linestyle=':', axis='y', zorder=0,  dashes=(1,5))
     sns.countplot(ax=ax1,data=df,x='sex',palette=color_palette)
     ax1.set_xlabel("")
     ax1.set_ylabel("")
 
-    ax2.text(-1, 150, ' 0: typical angina, 1: atypical angina ,2: non-anginal pain,3: asymptomatic', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+    ax2.text(-1, 150, ' 0: typical angina, 1: atypical angina ,2: non-anginal pain,3: asymptomatic', fontsize=14, fontweight='bold', fontfamily='serif', color="grey")
     ax2.grid(color='#000000', linestyle=':', axis='y', zorder=0,  dashes=(1,5))
     sns.countplot(ax=ax2,data=df,x='cp',palette=color_palette)
     ax2.set_xlabel("")
     ax2.set_ylabel("")
 
-    ax3.text(0, 275, 'fasting_blood_sugar', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+    ax3.text(0, 275, 'fasting_blood_sugar', fontsize=14, fontweight='bold', fontfamily='serif', color="grey")
     ax3.grid(color='#000000', linestyle=':', axis='y', zorder=0,  dashes=(1,5))
     sns.countplot(ax=ax3,data=df,x='fasting_blood_sugar',palette=color_palette)
     ax3.set_xlabel("")
     ax3.set_ylabel("")
 
-    ax4.text(-1, 170, 'resting electrocardiographic results', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+    ax4.text(-1, 170, 'resting electrocardiographic results', fontsize=14, fontweight='bold', fontfamily='serif', color="grey")
     ax4.grid(color='#000000', linestyle=':', axis='y', zorder=0,  dashes=(1,5))
     sns.countplot(ax=ax4,data=df,x='restecg',palette=color_palette)
     ax4.set_xlabel("")
     ax4.set_ylabel("")
 
-    ax5.text(0, 180, 'output', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+    ax5.text(0, 180, 'output', fontsize=14, fontweight='bold', fontfamily='serif', color="grey")
     ax5.grid(color='#000000', linestyle=':', axis='y', zorder=0,  dashes=(1,5))
     sns.countplot(ax=ax5,data=df,x='output',palette=color_palette)
     ax5.set_xlabel("")
     ax5.set_ylabel("")
 
-    ax6.text(0.5, 190, 'number of major vessels (0-3)', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+    ax6.text(0.5, 190, 'number of major vessels (0-3)', fontsize=14, fontweight='bold', fontfamily='serif', color="grey")
     ax6.grid(color='#000000', linestyle=':', axis='y', zorder=0,  dashes=(1,5))
     sns.countplot(ax=ax6,data=df,x='caa',palette=color_palette)
     ax6.set_xlabel("")
     ax6.set_ylabel("")
 
-    ax7.text(0.5, 220, 'exercise', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+    ax7.text(0.5, 220, 'exercise', fontsize=14, fontweight='bold', fontfamily='serif', color="grey")
     ax7.grid(color='#000000', linestyle=':', axis='y', zorder=0,  dashes=(1,5))
     sns.countplot(ax=ax7,data=df,x='exercise',palette=color_palette)
     ax7.set_xlabel("")
     ax7.set_ylabel("")
 
-    ax8.text(-1, 180, 'maximum heart rate achieved', fontsize=14, fontweight='bold', fontfamily='serif', color="#000000")
+    ax8.text(-1, 180, 'maximum heart rate achieved', fontsize=14, fontweight='bold', fontfamily='serif', color="grey")
     ax8.grid(color='#000000', linestyle=':', axis='y', zorder=0,  dashes=(1,5))
     sns.countplot(ax=ax8,data=df,x='thall',palette=color_palette)
     ax8.set_xlabel("")
