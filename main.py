@@ -125,3 +125,7 @@ st.pyplot(fig)
 st.title("Exercise rate")
 fig =  exercise_rate(df)
 st.pyplot(fig)
+
+
+st.markdown(
+        '''### GitHub Repository: [heart attack analysis](https://github.com/rishibrainerhub/heart_attack_analysis)''')
