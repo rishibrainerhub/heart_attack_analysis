@@ -33,6 +33,7 @@ df.loc[(df['output'] ==0), 'output'] = 'Low'
 
 
 #plot Count plot for various categorical features
+st.title("Heart Attack Data EDA")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.title("Count plot for various categorical features")
 fig  =  count_plots(df)
